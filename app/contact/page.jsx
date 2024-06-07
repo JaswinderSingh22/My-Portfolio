@@ -47,15 +47,13 @@ export default function Contact() {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 rounded-xl bg-[#27272c]">
+            <form className="flex flex-col gap-6 p-5 rounded-xl bg-[#27272c]">
               <h3 className="text-4xl text-accent"> Lets Work Together</h3>
               <p className="text-white/60">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aliquam, hic. Adipisci harum optio itaque mollitia excepturi
-                soluta atque. Sit ea provident maxime voluptatibus eum earum
-                deleniti laudantium quibusdam sunt ipsum.
+                Aliquam, hic.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <Input type="firstname" placeholder="Firstname" />
                 <Input type="lastname" placeholder="Lastname" />
                 <Input type="email" placeholder="Email" />
@@ -77,7 +75,7 @@ export default function Contact() {
                 </SelectContent>
               </Select>
 
-              <Textarea className="h-[200px]" placeholder="Type your message here" />
+              <Textarea className="h-[150px]" placeholder="Type your message here" />
               
               <Button size="md" className="max-w-40">Send Message</Button>
             </form>
