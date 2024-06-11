@@ -19,8 +19,8 @@ import WorkSliderButtons from "@/components/WorkSliderButtons";
 const projects = [
   {
     num: "01",
-    category: "amazon clone",
-    title: "project 1",
+    category: "e-commerce",
+    title: "amazon clone",
     description:
       "Check out my Amazon clone built with Next.js. This project demonstrates my ability to create complex,scalable e-commerce applications with modern technologies, featuring dynamic product listings, user authentication, and seamless shopping cart functionality.",
     stack: [
@@ -34,14 +34,14 @@ const projects = [
   },
   {
     num: "02",
-    category: "frontend",
-    title: "project 1",
+    category: "food delivery",
+    title: "Chulha",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia quas quam perferendis distinctio harum optio est porro et sapiente atque.",
-    stack: [{ name: "html 5" }, { name: "css 3" }, { name: "javascript" }],
-    image: "",
-    live: "",
-    github: "",
+    stack: [{ name: "react.js" }, { name: "css 3" }, { name: "javascript" }],
+    image: "/assets/work/chulha.png",
+    live: "https://chulha-jaswindersingh22s-projects.vercel.app/",
+    github: "https://github.com/JaswinderSingh22/chulha",
   },
   {
     num: "03",
