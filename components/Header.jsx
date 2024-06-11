@@ -11,7 +11,7 @@ function Header() {
       <div className="container max-auto flex justify-between items-center">
         {/* LOGO */}
         <Link href="/">
-          <h1 className="text-4xl font-semibold text-accent">Jass Singh</h1>
+          <h1 className="text-4xl font-semibold text-accent">Jaswinder Singh</h1>
         </Link>
 
         {/* desktop Nav and hire me button */}

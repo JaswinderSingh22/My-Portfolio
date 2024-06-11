@@ -6,6 +6,7 @@ import { FiDownload } from "react-icons/fi";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,22 +21,25 @@ export default function Home() {
               <span className="text-accent">Jaswinder Singh</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              quibusdam id nesciunt asperiores facere iure, cupiditate ipsam
-              repellendus quisquam est eum dolorum aperiam repellat tenetur
-              ullam nulla eveniet? Ullam, ab.
+              I'm a passionate frontend developer with 2.5 years of experience,
+              specializing in React, Next.js, Vue, and more. My expertise in
+              JavaScript, TypeScript, HTML, CSS, and Tailwind allows me to build
+              stunning, responsive web applications. Let's create something
+              amazing together.
             </p>
             {/* Buttons and socials */}
 
             <div className="flex flex-col xl:flex-row gap-8 items-center">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <Link href="/assets/resume/SoftwareEngineer.pdf" target="_blanK">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </Link>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
@@ -52,7 +56,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Stats/>
+      <Stats />
     </section>
   );
 }

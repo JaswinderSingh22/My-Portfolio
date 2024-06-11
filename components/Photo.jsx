@@ -20,10 +20,10 @@ export default function Photo() {
             opacity: 1,
             transition: { delay: 2, duration: 0.4, ease: "easeIn" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[298px] h-[298px]  xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/profile.jpg"
+            src="/assets/profile.png"
             priority
             quality={100}
             alt=""

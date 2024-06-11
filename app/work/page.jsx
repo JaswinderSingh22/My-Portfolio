@@ -19,14 +19,18 @@ import WorkSliderButtons from "@/components/WorkSliderButtons";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "amazon clone",
     title: "project 1",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia quas quam perferendis distinctio harum optio est porro et sapiente atque.",
-    stack: [{ name: "html 5" }, { name: "css 3" }, { name: "javascript" }],
-    image: "",
-    live: "",
-    github: "",
+      "Check out my Amazon clone built with Next.js. This project demonstrates my ability to create complex,scalable e-commerce applications with modern technologies, featuring dynamic product listings, user authentication, and seamless shopping cart functionality.",
+    stack: [
+      { name: "next.js" },
+      { name: "tailwind css" },
+      { name: "javascript" },
+    ],
+    image: "/assets/work/amazon.png",
+    live: "https://amazon-clone-tau-blond.vercel.app/",
+    github: "https://github.com/JaswinderSingh22/Amazon_Clone",
   },
   {
     num: "02",
@@ -56,14 +60,17 @@ export default function Work() {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
-    const currentIndex = swiper.activeIndex
-    setProject(projects[currentIndex])
-  }
+    const currentIndex = swiper.activeIndex;
+    setProject(projects[currentIndex]);
+  };
 
   return (
     <motion.section
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition:{delay:2.4, duration:0.4 , ease:"easeIn"} }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
@@ -81,7 +88,7 @@ export default function Work() {
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-accent text-xl">
+                    <li key={index} className="text-accent text-xl capitalize">
                       {item.name}
                       {index != project.stack.length - 1 && ","}
                     </li>
@@ -92,7 +99,7 @@ export default function Work() {
               <div className="border border-white/20"></div>
 
               <div className="flex items-center gap-4">
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex items-center justify-center group ">
@@ -104,7 +111,7 @@ export default function Work() {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex items-center justify-center group">
@@ -120,21 +127,36 @@ export default function Work() {
             </div>
           </div>
           <div className="w-full xl:w-[50%]">
-            <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              className="xl:h-[520px] mb-12"
+              onSlideChange={handleSlideChange}
+            >
               {projects.map((item, index) => {
-                return <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                  {/* <div className="absolute w-full h-full top-0 bottom-0 bg-black z-10"></div> */}
-                    <div className="relative w-full h-full">
-                      <Image src={project.image} fill className="object-fit" alt=""></Image>
-                  </div>
-                  </div>
-                </SwiperSlide>
+                return (
+                  <SwiperSlide key={index} className="w-full">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                      {/* <div className="absolute w-full h-full top-0 bottom-0 bg-black z-10"></div> */}
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={project.image}
+                          fill
+                          className="object-fit"
+                          alt=""
+                        ></Image>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
               })}
 
-              <WorkSliderButtons containerStyles="flex gap-2 absolute right-0 bottom-[46%] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all p-0 rounded-none"/>
+              <WorkSliderButtons
+                containerStyles="flex gap-2 absolute right-0 bottom-[46%] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all p-0 rounded-none"
+              />
             </Swiper>
-            </div>
+          </div>
         </div>
       </div>
     </motion.section>
