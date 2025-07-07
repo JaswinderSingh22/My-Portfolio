@@ -59,6 +59,17 @@ const projects = [
     live: "https://chulha-jaswindersingh22s-projects.vercel.app/",
     github: "https://github.com/JaswinderSingh22/chulha",
   },
+  {
+    num: "04",
+    category: "Issue Management Dashboard",
+    title: "Issue Management Dashboard",
+    description:
+      "A comprehensive issue tracking and management dashboard built with React.js and TypeScript. Users can create, log, and track tickets with customizable statuses and priority levels. Features include real-time status updates, priority-based filtering, detailed issue analytics, and an intuitive interface for efficient project management and bug tracking.",
+    stack: [{ name: "react.js" }, { name: "css 3" }, { name: "typescript" }],
+    image: "/assets/work/issue-mangement.png",
+    live: "https://issue-management-dashboard.vercel.app/",
+    github: "https://github.com/JaswinderSingh22/Issue-Management-Dashboard",
+  },
 ];
 
 export default function Work() {
