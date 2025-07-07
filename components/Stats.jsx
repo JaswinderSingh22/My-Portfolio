@@ -2,13 +2,21 @@
 
 import CountUp from "react-countup";
 
+// Calculate months of experience
+const startDate = new Date('2022-01-11');
+const currentDate = new Date();
+const monthsDiff = Math.floor(
+  (currentDate - startDate) / (1000 * 60 * 60 * 24 * 30.44) // using average month length
+);
+ 
+
 const stats = [
   {
-    num: 30,
+    num: monthsDiff,
     text: "Months of Experience",
   },
   {
-    num: 5,
+    num: 6,
     text: "+ Projects Completed",
   },
   {
@@ -16,7 +24,7 @@ const stats = [
     text: "+ Technologies Mastered",
   },
   {
-    num: 500,
+    num: 1000,
     text: "+ Code Commits",
   },
 ];

@@ -21,16 +21,17 @@ export default function Home() {
               <span className="text-accent">Jaswinder Singh</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I'm a passionate frontend developer with 2.5 years of experience,
-              specializing in React, Next.js, Vue, and more. My expertise in
-              JavaScript, TypeScript, HTML, CSS, and Tailwind allows me to build
-              stunning, responsive web applications. Let's create something
+              I'm a passionate senior software engineer with 3.5 years of
+              experience, specializing in React, Next.js, Vue, Node.js, and
+              more. My expertise in JavaScript, TypeScript, HTML, CSS, Tailwind,
+              MongoDB, and backend development allows me to build stunning,
+              responsive full-stack web applications. Let's create something
               amazing together.
             </p>
             {/* Buttons and socials */}
 
             <div className="flex flex-col xl:flex-row gap-8 items-center">
-              <Link href="/assets/resume/SoftwareEngineer.pdf" target="_blanK">
+              <Link href="/assets/resume/JaswinderSingh.pdf" target="_blanK">
                 <Button
                   variant="outline"
                   size="lg"

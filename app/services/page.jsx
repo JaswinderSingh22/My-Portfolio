@@ -6,26 +6,26 @@ import { motion } from "framer-motion";
 const services = [
   {
     num: "01",
-    title: "Web Developement",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dolore exercitationem porro velit ",
+    title: "Web Development",
+    desc: "Full-stack web development using modern technologies like React, Next.js, Vue, Node.js, and MongoDB. I create responsive, scalable applications with clean code and optimal performance.",
     href: "",
   },
   {
     num: "02",
     title: "UI/UX Design",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dolore exercitationem porro velit ",
+    desc: "Crafting intuitive user interfaces and seamless user experiences. I design pixel-perfect, accessible interfaces using Figma and implement them with HTML, CSS, and Tailwind CSS.",
     href: "",
   },
   {
     num: "03",
-    title: "Logo Design",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dolore exercitationem porro velit ",
+    title: "Backend Development",
+    desc: "Building robust server-side applications with Node.js, Express, and MongoDB. I develop RESTful APIs, handle database design, and ensure secure, efficient data management.",
     href: "",
   },
   {
     num: "04",
-    title: "SEO",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate dolore exercitationem porro velit ",
+    title: "Performance Optimization",
+    desc: "Optimizing web applications for speed and efficiency. I implement best practices for code splitting, lazy loading, SEO optimization, and overall performance enhancement.",
     href: "",
   },
 ];

@@ -19,6 +19,22 @@ import WorkSliderButtons from "@/components/WorkSliderButtons";
 const projects = [
   {
     num: "01",
+    category: "inco-ai",
+    title: "Inco AI",
+    description:
+      "Inco AI is an innovative interior design platform that transforms room images using OpenAI API. This project showcases my expertise in AI integration, allowing users to upload interior photos and generate stunning redesigned versions with different styles and themes through advanced AI image processing.",
+    stack: [
+      { name: "next.js" },
+      { name: "tailwind css" },
+      { name: "typescript" },
+      { name: "openai api" },
+    ],
+    image: "/assets/work/incoai.png",
+    live: "https://ai.interiorcompany.com/",
+    github: "",
+  },
+  {
+    num: "02",
     category: "e-commerce",
     title: "amazon clone",
     description:
@@ -33,26 +49,15 @@ const projects = [
     github: "https://github.com/JaswinderSingh22/Amazon_Clone",
   },
   {
-    num: "02",
+    num: "03",
     category: "food delivery",
     title: "Chulha",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia quas quam perferendis distinctio harum optio est porro et sapiente atque.",
+      "Chulha is a comprehensive food delivery application built with React.js, featuring an intuitive user interface for browsing restaurants, viewing menus, and placing orders. The app includes real-time order tracking, user authentication, shopping cart functionality, and responsive design for seamless mobile and desktop experiences.",
     stack: [{ name: "react.js" }, { name: "css 3" }, { name: "javascript" }],
     image: "/assets/work/chulha.png",
     live: "https://chulha-jaswindersingh22s-projects.vercel.app/",
     github: "https://github.com/JaswinderSingh22/chulha",
-  },
-  {
-    num: "03",
-    category: "frontend",
-    title: "project 1",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia quas quam perferendis distinctio harum optio est porro et sapiente atque.",
-    stack: [{ name: "html 5" }, { name: "css 3" }, { name: "javascript" }],
-    image: "",
-    live: "",
-    github: "",
   },
 ];
 
@@ -138,11 +143,11 @@ export default function Work() {
                   <SwiperSlide key={index} className="w-full">
                     <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                       {/* <div className="absolute w-full h-full top-0 bottom-0 bg-black z-10"></div> */}
-                      <div className="relative w-full h-full">
+                      <div className="relative w-full h-full bg-transparent">
                         <Image
                           src={project.image}
                           fill
-                          className="object-fit"
+                          className="object-contain"
                           alt=""
                         ></Image>
                       </div>

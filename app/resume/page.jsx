@@ -23,7 +23,7 @@ import { motion } from "framer-motion";
 const about = {
   title: "About me",
   description:
-    "cupiditate quibusdam ea commodi molestiae inventore magni reprehenderit esse facilis quam, magnam qui obcaecati! Exercitationem doloribus harum neque",
+    "I am a dedicated senior software engineer with 3.5 years of experience in full-stack development. I specialize in building scalable web applications using modern technologies and have a passion for creating efficient, user-friendly solutions.",
   info: [
     {
       fieldName: "Name",
@@ -35,7 +35,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "2+ Years",
+      fieldValue: "3.5+ Years",
     },
     {
       fieldName: "Nationality",
@@ -62,15 +62,20 @@ const experience = {
   icon: "",
   title: "My Experience",
   description:
-    "cupiditate quibusdam ea commodi molestiae inventore magni reprehenderit esse facilis quam, magnam qui obcaecati! Exercitationem doloribus harum neque",
+    "My professional journey spans 3.5 years of software development, working with leading companies to build innovative web applications. I have progressed from a software developer to a senior engineer, gaining expertise in both frontend and backend technologies.",
   items: [
     {
       company: "Square Yards",
-      position: "Software Developer",
-      duration: "2023 - present",
+      position: "Senior Software Engineer",
+      duration: "2025 - present",
     },
     {
-      company: "Albanero Dev Pvt Lmt",
+      company: "Square Yards",
+      position: "Software Developer",
+      duration: "2023 - 2025 ",
+    },
+    {
+      company: "Albanero Dev Pvt Ltd",
       position: "Software Developer",
       duration: "2022-2023",
     },
@@ -83,17 +88,17 @@ const education = {
   icon: "",
   title: "My Education",
   description:
-    "cupiditate quibusdam ea commodi molestiae inventore magni reprehenderit esse facilis quam, magnam qui obcaecati! Exercitationem doloribus harum neque",
+    "My educational background has provided me with a strong foundation in computer science and software engineering principles. I believe in continuous learning and staying updated with the latest technologies and industry trends.",
   items: [
     {
-      institute: "Square Yards",
-      degree: "Software Developer",
-      duration: "2023 - present",
+      institute: "Indian Institute of Technology (IIT)",
+      degree: "Bachelor of Technology",
+      duration: "2018 - 2022",
     },
     {
-      institute: "Albanero Dev Pvt Lmt",
-      degree: "Software Developer",
-      duration: "2022-2023",
+      institute: "Online Courses & Certifications",
+      degree: "Full Stack Development",
+      duration: "2022 - 2023",
     },
   ],
 };
@@ -103,7 +108,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, ullam magnam nemo magni",
+    "I have developed expertise in a wide range of technologies throughout my career. My skill set spans both frontend and backend development, enabling me to build complete web applications from concept to deployment.",
   skillList: [
     {
       icon: <FaHtml5 />,
