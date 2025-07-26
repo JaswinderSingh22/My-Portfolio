@@ -70,6 +70,21 @@ const projects = [
     live: "https://issue-management-dashboard.vercel.app/",
     github: "https://github.com/JaswinderSingh22/Issue-Management-Dashboard",
   },
+  {
+  num: "05",
+  category: "AI Chat Interface",
+  title: "Smart Document Chat",
+  description: "An intelligent document-aware chat interface built with Next.js and TypeScript. Users can upload documents (PDF, DOCX, TXT), engage with AI through natural language queries, and utilize quick workflows for document analysis. Features include real-time markdown rendering, session management, contextual responses based on uploaded files, project/knowledge source selection, and an intuitive glassmorphism UI design for seamless document interaction and analysis.",
+  stack: [
+    { name: "next.js" },
+    { name: "react.js" },
+    { name: "typescript" },
+    { name: "tailwindcss" }
+  ],
+  image: "/assets/work/chatAI.png",
+  live: "https://chat-bot-nu-steel.vercel.app/",
+  github: "https://github.com/JaswinderSingh22/ChatBot"
+}
 ];
 
 export default function Work() {
