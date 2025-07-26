@@ -58,7 +58,7 @@ import Image from "next/image";
 const about = {
   title: "About me",
   description:
-    "I am a dedicated senior software engineer with 3.5 years of experience in full-stack development. I specialize in building scalable web applications using modern technologies and have a passion for creating efficient, user-friendly solutions.",
+    "I am a dedicated senior frontend engineer with 3.5 years of experience in frontend development and user interface design. I specialize in building responsive, interactive web applications using modern frontend technologies and have a passion for creating exceptional user experiences.",
   info: [
     { fieldName: "Name", fieldValue: "Jaswinder Singh" },
     { fieldName: "Phone", fieldValue: "8872730235" },
@@ -84,10 +84,11 @@ const experience = {
 const education = {
   title: "My Education",
   description:
-    "My educational background has provided me with a strong foundation in computer science and software engineering principles.",
+    "My educational background has provided me with a strong foundation in engineering principles and analytical thinking, which I've applied to frontend development.",
   items: [
-    { institute: "Indian Institute of Technology (IIT)", degree: "Bachelor of Technology", duration: "2018 - 2022" },
-    { institute: "Online Courses & Certifications", degree: "Full Stack Development", duration: "2022 - 2023" },
+    { institute: "Indian Institute of Technology, Delhi", degree: "B.Tech in Textile & Fiber Engineering", duration: "2017 - 2021" },
+    { institute: "Kendriya Vidyalaya No.2, Patiala", degree: "Senior Secondary (CBSE)", duration: "2016" },
+    { institute: "Kendriya Vidyalaya No.2, Patiala", degree: "Secondary (CBSE)", duration: "2014" },
   ],
 };
 
@@ -111,7 +112,7 @@ const services = [
   {
     num: "01",
     title: "Web Development",
-    desc: "Full-stack web development using modern technologies like React, Next.js, Vue, Node.js, and MongoDB.",
+    desc: "Frontend web development using modern technologies like React, Next.js, Vue, TypeScript, and advanced CSS frameworks for responsive, interactive user interfaces.",
     href: "",
   },
   {
@@ -122,8 +123,8 @@ const services = [
   },
   {
     num: "03",
-    title: "Backend Development",
-    desc: "Building robust server-side applications with Node.js, Express, and MongoDB with secure API development.",
+    title: "Frontend Architecture",
+    desc: "Designing scalable frontend architectures with modern state management, component libraries, and build optimization for large-scale applications.",
     href: "",
   },
   {
@@ -143,7 +144,7 @@ const projects = [
     stack: [{ name: "next.js" }, { name: "tailwind css" }, { name: "typescript" }, { name: "openai api" }],
     image: "/assets/work/incoai.png",
     live: "https://ai.interiorcompany.com/",
-    github: "",
+    github: "https://github.com/JaswinderSingh22/inco-ai",
   },
   {
     num: "02",
@@ -260,7 +261,7 @@ export default function Home() {
                   <FiCode className="text-accent text-lg" />
                 </div>
                 <span className="text-xl font-semibold bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
-                  Senior Software Developer
+                  Senior Frontend Developer
                 </span>
               </motion.div>
 
@@ -284,9 +285,9 @@ export default function Home() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-lg md:text-xl leading-relaxed mb-8 text-white/70 max-w-[600px]"
               >
-                Passionate full-stack engineer with <span className="text-accent font-semibold">3.5+ years</span> of experience
-                crafting exceptional digital experiences. Specialized in modern web technologies including
-                <span className="text-white/90 font-medium"> React, Next.js, Vue, Node.js</span>, and more.
+                Passionate frontend engineer with <span className="text-accent font-semibold">3.5+ years</span> of experience
+                crafting exceptional user interfaces and digital experiences. Specialized in modern frontend technologies including
+                <span className="text-white/90 font-medium"> React, Next.js, Vue, TypeScript</span>, and more.
               </motion.p>
 
               {/* Tech Stack */}
@@ -296,7 +297,7 @@ export default function Home() {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="flex flex-wrap gap-2 mb-10 justify-center xl:justify-start"
               >
-                {['React', 'Next.js', 'TypeScript', 'Node.js', 'MongoDB'].map((tech, index) => (
+                {['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vue.js'].map((tech, index) => (
                   <motion.span
                     key={tech}
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -404,7 +405,7 @@ export default function Home() {
               My Services
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto text-lg">
-              I offer comprehensive web development services to help bring your ideas to life with modern technology
+              I offer comprehensive frontend development services to help bring your ideas to life with cutting-edge user interface technologies
             </p>
           </motion.div>
 
@@ -808,7 +809,7 @@ export default function Home() {
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger className="w-10 h-10 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-all duration-300">
-                            <BsArrowUpRight className="text-sm" />
+                            <BsArrowUpRight className="text-base" />
                           </TooltipTrigger>
                           <TooltipContent><p>Live Demo</p></TooltipContent>
                         </Tooltip>
@@ -819,7 +820,7 @@ export default function Home() {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-10 h-10 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-all duration-300">
-                              <BsGithub className="text-sm" />
+                              <BsGithub className="text-base" />
                             </TooltipTrigger>
                             <TooltipContent><p>Source Code</p></TooltipContent>
                           </Tooltip>
@@ -868,14 +869,27 @@ export default function Home() {
 
                   {/* Bottom Actions */}
                   <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                    <Link
-                      href={project.live}
-                      target="_blank"
-                      className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-300 group/link"
-                    >
-                      <span>View Project</span>
-                      <BsArrowUpRight className="text-xs group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-300" />
-                    </Link>
+                    <div className="flex items-center gap-4">
+                      <Link
+                        href={project.live}
+                        target="_blank"
+                        className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-300 group/link"
+                      >
+                        <span>Live Demo</span>
+                        <BsArrowUpRight className="text-sm group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-300" />
+                      </Link>
+
+                      {project.github && (
+                        <Link
+                          href={project.github}
+                          target="_blank"
+                          className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-300 group/link"
+                        >
+                          <span>Code</span>
+                          <BsGithub className="text-sm group-hover/link:scale-110 transition-transform duration-300" />
+                        </Link>
+                      )}
+                    </div>
 
                     <div className="flex items-center gap-1">
                       <div className="w-1 h-1 bg-accent rounded-full animate-pulse"></div>
@@ -1013,7 +1027,7 @@ export default function Home() {
                         <SelectLabel className="text-accent">Select a service</SelectLabel>
                         <SelectItem value="web-development" className="focus:bg-accent/10 focus:text-accent">Web Development</SelectItem>
                         <SelectItem value="ui-ux-design" className="focus:bg-accent/10 focus:text-accent">UI/UX Design</SelectItem>
-                        <SelectItem value="backend-development" className="focus:bg-accent/10 focus:text-accent">Backend Development</SelectItem>
+                        <SelectItem value="frontend-architecture" className="focus:bg-accent/10 focus:text-accent">Frontend Architecture</SelectItem>
                         <SelectItem value="performance-optimization" className="focus:bg-accent/10 focus:text-accent">Performance Optimization</SelectItem>
                       </SelectGroup>
                     </SelectContent>

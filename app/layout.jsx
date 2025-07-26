@@ -11,7 +11,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Jaswinder Singh - Full Stack Developer",
+  title: "Jaswinder Singh - Frontend Developer",
   description: "Senior Software Engineer with 3.5+ years of experience in React, Next.js, Vue, Node.js, and modern web technologies.",
 };
 
