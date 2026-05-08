@@ -124,7 +124,7 @@ const projects = [
   {
   num: "01",
   category: "saas",
-  title: "Performa — employee review cycles",
+  title: "PerformaAi — employee review cycles",
   description:
     "A full-stack performance-review platform built with Next.js. Organisations run review cycles, collect self-reviews via secure magic links, and move submissions through manager remarks and approvals—with role-aware dashboards for HR, admins, and team leads. Demonstrates scalable app architecture, Supabase-backed data and auth, transactional email, and AI-assisted tooling for a real HR workflow.",
   stack: [
