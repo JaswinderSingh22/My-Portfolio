@@ -3,6 +3,7 @@ import "./globals.css";
 
 // components
 import Header from "@/components/Header";
+import { getCareerYearsPlusLabel } from "@/lib/utils";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -10,10 +11,13 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrainsMono",
 });
 
-export const metadata = {
-  title: "Jaswinder Singh - Frontend Developer",
-  description: "Senior Software Engineer with 3.5+ years of experience in React, Next.js, Vue, Node.js, and modern web technologies.",
-};
+export function generateMetadata() {
+  const years = getCareerYearsPlusLabel(1);
+  return {
+    title: "Jaswinder Singh - Frontend Developer",
+    description: `Senior Software Engineer with ${years} years of experience in React, Next.js, Vue, Node.js, and modern web technologies.`,
+  };
+}
 
 export default function RootLayout({ children }) {
   return (

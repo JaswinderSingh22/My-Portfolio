@@ -53,31 +53,16 @@ import Stats from "@/components/Stats";
 import WorkSliderButtons from "@/components/WorkSliderButtons";
 import Link from "next/link";
 import Image from "next/image";
+import { getCareerYearsNumberString, getCareerYearsPlusLabel } from "@/lib/utils";
 
 // Data
-const about = {
-  title: "About me",
-  description:
-    "I am a dedicated senior frontend engineer with 3.5 years of experience in frontend development and user interface design. I specialize in building responsive, interactive web applications using modern frontend technologies and have a passion for creating exceptional user experiences.",
-  info: [
-    { fieldName: "Name", fieldValue: "Jaswinder Singh" },
-    { fieldName: "Phone", fieldValue: "8872730235" },
-    { fieldName: "Experience", fieldValue: "3.5+ Years" },
-    { fieldName: "Nationality", fieldValue: "Indian" },
-    { fieldName: "Email", fieldValue: "jaswindersingh@iitdalumni.com" },
-    { fieldName: "Freelance", fieldValue: "Available" },
-    { fieldName: "Languages", fieldValue: "English, Hindi, Punjabi" },
-  ],
-};
-
 const experience = {
   title: "My Experience",
-  description:
-    "My professional journey spans 3.5 years of software development, working with leading companies to build innovative web applications.",
   items: [
-    { company: "Square Yards", position: "Senior Software Engineer", duration: "2025 - present" },
-    { company: "Square Yards", position: "Software Developer", duration: "2023 - 2025" },
-    { company: "Albanero Dev Pvt Ltd", position: "Software Developer", duration: "2022-2023" },
+    { company: "GradRight", position: "SDE 2 - Frontend", duration: "Sept 2025 - present" },
+    { company: "Square Yards", position: "Senior Software Engineer", duration: "April 2025 - Sept 2025" },
+    { company: "Square Yards", position: "Software Developer", duration: " July 2023 - April 2025" },
+    { company: "Albanero Dev Pvt Ltd", position: "Software Developer", duration: "Jan 2022- July 2023" },
   ],
 };
 
@@ -137,7 +122,41 @@ const services = [
 
 const projects = [
   {
-    num: "01",
+  num: "01",
+  category: "saas",
+  title: "Performa — employee review cycles",
+  description:
+    "A full-stack performance-review platform built with Next.js. Organisations run review cycles, collect self-reviews via secure magic links, and move submissions through manager remarks and approvals—with role-aware dashboards for HR, admins, and team leads. Demonstrates scalable app architecture, Supabase-backed data and auth, transactional email, and AI-assisted tooling for a real HR workflow.",
+  stack: [
+    { name: "next.js" },
+    { name: "typescript" },
+    { name: "tailwind css" },
+    { name: "supabase" },
+    { name: "react" },
+  ],
+  image: "/assets/work/performa.png",
+  live: "https://perfromaai.in",
+  github: "https://github.com/JaswinderSingh22/Performa",
+},
+{
+  num: "02",
+  category: "saas",
+  title: "InstaCRM — CRM for creators & brand deals",
+  description:
+    "A production CRM SaaS built with Next.js for creators and agencies: capture leads, move deals on a drag-and-drop Kanban board, manage brands and tasks, and track payments and invoicing from one dashboard—with charts for pipeline health and revenue. Supabase powers auth, Postgres, and row-level security; Razorpay handles subscription checkout, orders, and webhooks for billing. Demonstrates App Router server actions, workspace-scoped multi-tenant data, and a polished shadcn/ui experience for a real outbound and partnership workflow.",
+  stack: [
+    { name: "next.js" },
+    { name: "typescript" },
+    { name: "tailwind css" },
+    { name: "supabase" },
+    { name: "react" },
+  ],
+  image: "/assets/work/instacrm.png",
+  live: "https://insta-crm-sand.vercel.app/",
+  github: "https://github.com/JaswinderSingh22/InstaCRM",
+},
+  {
+    num: "03",
     category: "inco-ai",
     title: "Inco AI",
     description: "Inco AI is an innovative interior design platform that transforms room images using OpenAI API.",
@@ -147,7 +166,7 @@ const projects = [
     github: "https://github.com/JaswinderSingh22/inco-ai",
   },
   {
-    num: "02",
+    num: "04",
     category: "e-commerce",
     title: "amazon clone",
     description: "Amazon clone built with Next.js featuring dynamic product listings and shopping cart functionality.",
@@ -157,7 +176,7 @@ const projects = [
     github: "https://github.com/JaswinderSingh22/Amazon_Clone",
   },
   {
-    num: "03",
+    num: "05",
     category: "food delivery",
     title: "Chulha",
     description: "Comprehensive food delivery application with real-time order tracking and responsive design.",
@@ -167,7 +186,7 @@ const projects = [
     github: "https://github.com/JaswinderSingh22/chulha",
   },
   {
-    num: "04",
+    num: "06",
     category: "Issue Management Dashboard",
     title: "Issue Management Dashboard",
     description: "Comprehensive issue tracking dashboard with customizable statuses and priority levels.",
@@ -177,7 +196,7 @@ const projects = [
     github: "https://github.com/JaswinderSingh22/Issue-Management-Dashboard",
   },
   {
-    num: "05",
+    num: "07",
     category: "AI Chat Interface",
     title: "Smart Document Chat",
     description: "Intelligent document-aware chat interface with AI integration and real-time markdown rendering.",
@@ -195,6 +214,23 @@ const contactInfo = [
 ];
 
 export default function Home() {
+  const expYears = getCareerYearsNumberString(1);
+  const expYearsBadge = getCareerYearsPlusLabel(1);
+  const about = {
+    title: "About me",
+    description:
+      `I am a dedicated senior frontend engineer with ${expYears} years of experience in frontend development and user interface design. I specialize in building responsive, interactive web applications using modern frontend technologies and have a passion for creating exceptional user experiences.`,
+    info: [
+      { fieldName: "Name", fieldValue: "Jaswinder Singh" },
+      { fieldName: "Phone", fieldValue: "8872730235" },
+      { fieldName: "Experience", fieldValue: `${expYears}+ Years` },
+      { fieldName: "Nationality", fieldValue: "Indian" },
+      { fieldName: "Email", fieldValue: "jaswindersingh@iitdalumni.com" },
+      { fieldName: "Freelance", fieldValue: "Available" },
+      { fieldName: "Languages", fieldValue: "English, Hindi, Punjabi" },
+    ],
+  };
+
   const [project, setProject] = useState(projects[0]);
   const [formData, setFormData] = useState({
     firstname: '', lastname: '', email: '', phone: '', service: '', message: ''
@@ -285,7 +321,7 @@ export default function Home() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-lg md:text-xl leading-relaxed mb-8 text-white/70 max-w-[600px]"
               >
-                Passionate frontend engineer with <span className="text-accent font-semibold">3.5+ years</span> of experience
+                Passionate frontend engineer with <span className="text-accent font-semibold">{expYearsBadge} years</span> of experience
                 crafting exceptional user interfaces and digital experiences. Specialized in modern frontend technologies including
                 <span className="text-white/90 font-medium"> React, Next.js, Vue, TypeScript</span>, and more.
               </motion.p>
